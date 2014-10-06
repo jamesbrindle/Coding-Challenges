@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.UI", "SearchEngine\SearchEngine.UI.csproj", "{83AC3CB4-D5DB-47B3-94FA-5F8BD43B83BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.BusinessObjects", "SearchEngine.BusinessObjects\SearchEngine.BusinessObjects.csproj", "{6180966D-0D6D-49E9-831A-8900BCA3004C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83AC3CB4-D5DB-47B3-94FA-5F8BD43B83BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83AC3CB4-D5DB-47B3-94FA-5F8BD43B83BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83AC3CB4-D5DB-47B3-94FA-5F8BD43B83BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83AC3CB4-D5DB-47B3-94FA-5F8BD43B83BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6180966D-0D6D-49E9-831A-8900BCA3004C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6180966D-0D6D-49E9-831A-8900BCA3004C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6180966D-0D6D-49E9-831A-8900BCA3004C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6180966D-0D6D-49E9-831A-8900BCA3004C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
