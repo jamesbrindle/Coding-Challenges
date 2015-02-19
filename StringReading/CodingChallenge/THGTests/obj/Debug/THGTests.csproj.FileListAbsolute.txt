@@ -1,0 +1,8 @@
+c:\users\robstone\documents\visual studio 2010\Projects\THGTests\THGTests\bin\Debug\THGTests.dll
+c:\users\robstone\documents\visual studio 2010\Projects\THGTests\THGTests\bin\Debug\THGTests.pdb
+c:\users\robstone\documents\visual studio 2010\Projects\THGTests\THGTests\obj\Debug\THGTests.dll
+c:\users\robstone\documents\visual studio 2010\Projects\THGTests\THGTests\obj\Debug\THGTests.pdb
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\bin\Debug\THGTests.dll
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\bin\Debug\THGTests.pdb
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\obj\Debug\THGTests.dll
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\obj\Debug\THGTests.pdb

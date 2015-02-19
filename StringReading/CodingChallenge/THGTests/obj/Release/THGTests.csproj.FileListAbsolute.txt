@@ -1,0 +1,4 @@
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\bin\Release\THGTests.dll
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\bin\Release\THGTests.pdb
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\obj\Release\THGTests.dll
+H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\THGTests\obj\Release\THGTests.pdb
