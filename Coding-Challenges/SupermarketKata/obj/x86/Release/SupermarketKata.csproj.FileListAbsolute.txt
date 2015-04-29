@@ -1,0 +1,8 @@
+G:\Documents\Work\Coding-Challenges\SupermarketKata\bin\Release\SupermarketKata.exe.config
+G:\Documents\Work\Coding-Challenges\SupermarketKata\bin\Release\SupermarketKata.exe
+G:\Documents\Work\Coding-Challenges\SupermarketKata\bin\Release\SupermarketKata.pdb
+G:\Documents\Work\Coding-Challenges\SupermarketKata\obj\x86\Release\SupermarketKata.MainForm.resources
+G:\Documents\Work\Coding-Challenges\SupermarketKata\obj\x86\Release\SupermarketKata.Properties.Resources.resources
+G:\Documents\Work\Coding-Challenges\SupermarketKata\obj\x86\Release\SupermarketKata.csproj.GenerateResource.Cache
+G:\Documents\Work\Coding-Challenges\SupermarketKata\obj\x86\Release\SupermarketKata.exe
+G:\Documents\Work\Coding-Challenges\SupermarketKata\obj\x86\Release\SupermarketKata.pdb
