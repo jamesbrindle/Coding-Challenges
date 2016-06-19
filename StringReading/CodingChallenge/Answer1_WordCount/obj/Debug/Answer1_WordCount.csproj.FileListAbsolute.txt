@@ -1,8 +1,0 @@
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\bin\Debug\Answer1_WordCount.exe.config
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\obj\Debug\Answer1_WordCount.csprojResolveAssemblyReference.cache
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\bin\Debug\Answer1_WordCount.exe
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\bin\Debug\Answer1_WordCount.pdb
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\bin\Debug\THGTests.dll
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\bin\Debug\THGTests.pdb
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\obj\Debug\Answer1_WordCount.exe
-H:\Documents\Work\Repositories\Coding-Challenges\StringReading\CodingChallenge\Answer1_WordCount\obj\Debug\Answer1_WordCount.pdb

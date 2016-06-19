@@ -1,4 +1,0 @@
-G:\Documents\Work\Coding-Challenges\RobotWars\bin\Release\RobotWars.exe
-G:\Documents\Work\Coding-Challenges\RobotWars\bin\Release\RobotWars.pdb
-G:\Documents\Work\Coding-Challenges\RobotWars\obj\x86\Release\RobotWars.exe
-G:\Documents\Work\Coding-Challenges\RobotWars\obj\x86\Release\RobotWars.pdb
