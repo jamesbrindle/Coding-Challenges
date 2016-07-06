@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>University Enrollment Demo App</h2>
+
+    <a style="font-size: 12pt;" href="https://github.com/jamesbrindle/UniEnrollment-DEMO" target="_blank">Download Project from GitHub</a>
+    <br />
+    <a style="font-size: 12pt;" href="~/Documentation/html/index.html" target="_blank">Documentation</a><br/>
+    <p style="font-size: 11pt; margin-top: -10px; margin-bottom: -25px;">Source code documentaiton and a little explanation of the demo project</p>
+    <br />
+    <span style="font-weight: bold; font-size: 12pt;">Prerequisites</span><br />
+    <p style="font-size: 12pt;">
+        MS Visual Studio 2015 (Community is fine) <a style="font-size: 12pt;" href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx" target="_blank">Download</a><br />
+        An MS SQL database instance <a style="font-size: 12pt;" href="https://www.microsoft.com/en-us/download/details.aspx?id=52679" target="_blank">Download</a><br />
+        .Net 4.5 (Installed with VS) <a style="font-size: 12pt;" href="https://www.microsoft.com/en-gb/download/details.aspx?id=30653" target="_blank">Download</a>
+    </p>
+
+</div>
+
+@if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN)
+{
+    //TODO: Are we putting something here?
+}
+else
+{
+    <span style="font-weight: bold;">Students...</span><br />
+
+    if (UniEnrollment_MVC.Helpers.CookieHelper.IsLoggedIn())
+    {
+        @Html.ActionLink("Enroll on a course", "Details", "Student", new { id = UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID }, null)
+    }
+    else
+    {
+        @Html.ActionLink("Enroll on a course", "GoToLogin", "Login", new { where = "enrollment" }, null)
+    }
+}
+
+<br />
+<br />
+
+<div class="row">
+    <div class="col-xs-7 col-md-4">
+
+        <h4>List of Courses Available</h4>
+
+        @{
+            foreach (var item in UniEnrollment_MVC.Models.CourseViewModel.GetCourseList())
+            {
+                @Html.ActionLink(item.Name, "Details", "Course", new { id = item.ID }, null)<br />
+            }
+        }
+        <br />
+
+    </div>
+
+    <div class="col-xs-7 col-md-4">
+
+
+        <h4>List of Employed Professors</h4>
+
+
+        @{
+            foreach (var item in UniEnrollment_MVC.Models.ProfessorViewModel.GetProfessorList())
+            {
+                @Html.ActionLink(item.Name, "Details", "Professor", new { id = item.ID }, null)<br />
+            }
+        }
+        <br />
+
+    </div>
+
+</div>

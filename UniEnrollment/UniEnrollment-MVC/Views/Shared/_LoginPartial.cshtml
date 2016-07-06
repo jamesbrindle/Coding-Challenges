@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (UniEnrollment_MVC.Helpers.CookieHelper.IsLoggedIn())
+{
+    string loggedInUser = UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserName;
+
+    using (Html.BeginForm("LogOff", "Login"))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <p style="color: white; margin-left: 13px; margin-right: 30px; padding-top: 15px;">
+                    @if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.STUDENT)
+                    {
+                        <span>Hello @loggedInUser</span> @Html.ActionLink("(Manage)", "Details", "Student", new { id = UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID }, htmlAttributes: new { id = "loginLink" })
+                    }
+                    @if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.PROFESSOR)
+                    {
+                        <span>Hello @loggedInUser</span> @Html.ActionLink("(Manage)", "Details", "Professor", new { id = UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID }, htmlAttributes: new { id = "loginLink" })
+                    }
+                    @if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN)
+                    {
+                        <span>Hello @loggedInUser</span> 
+                    }
+                </p>
+            </li>            
+            <li>@Html.ActionLink("Course List", "Index", "Course", routeValues: null, htmlAttributes: new { id = "enrollLink" })</li>
+            @if (!(UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.STUDENT))
+            {
+                <li>@Html.ActionLink("Student List", "Index", "Student", routeValues: null, htmlAttributes: new { id = "enrollLink" })</li>
+            }
+            <li>@Html.ActionLink("Professor List", "Index", "Professor", routeValues: null, htmlAttributes: new { id = "enrollLink" })</li>
+            <li>@Html.ActionLink("Log Out", "LogOff", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Course List", "Index", "Course", routeValues: null, htmlAttributes: new { id = "enrollLink" })</li>
+        <li>@Html.ActionLink("Professor List", "Index", "Professor", routeValues: null, htmlAttributes: new { id = "enrollLink" })</li>
+        <li>@Html.ActionLink("Log In", "GoToLogin", "Login", new { where = string.Empty }, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

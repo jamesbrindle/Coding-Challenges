@@ -1,0 +1,242 @@
+\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper}{}\section{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper Class Reference}
+\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper}\index{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper}}
+
+
+Used for getting and storing values from browser\textquotesingle{}s cookie store. It\textquotesingle{}s main use is storing user data and validation of logon and user type  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9}{Logged\+In\+User\+Type\+Enum} \{ \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9a73acd9a5972130b75066c82595a1fae3}{Logged\+In\+User\+Type\+Enum.\+A\+D\+M\+IN}, 
+\hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9a172b9057f1e59ddcb93e8522b7968f09}{Logged\+In\+User\+Type\+Enum.\+P\+R\+O\+F\+E\+S\+S\+OR}, 
+\hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9ad0c872afd87e7fbe56a3cdf8f3a0f18c}{Logged\+In\+User\+Type\+Enum.\+S\+T\+U\+D\+E\+NT}, 
+\hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9ab50339a10e1de285ac99d4c3990b8693}{Logged\+In\+User\+Type\+Enum.\+N\+O\+NE}
+ \}\begin{DoxyCompactList}\small\item\em For ease in Views \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a8d89858ce1ad57300dba697b3e025786}{Log\+Out} ()
+\begin{DoxyCompactList}\small\item\em Simply sets the user type in the cookie to \textquotesingle{}99\textquotesingle{} -\/ Not a recognised user type \end{DoxyCompactList}\item 
+static void \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a721083f9d6d893479224691ed474cadd}{Set\+Login\+Cookie} (int user\+ID)
+\begin{DoxyCompactList}\small\item\em Generates the cooke value string and sets the user cookie \end{DoxyCompactList}\item 
+static bool \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a5246ce649993e4489954be79b6ff81c1}{Is\+Logged\+In} ()
+\begin{DoxyCompactList}\small\item\em Checks the login cookie to see if a user is looged in \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9}{Logged\+In\+User\+Type\+Enum} \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a3399b7e7ec670f2bff2bc6ae2939fca1}{Logged\+In\+User\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Static property to get the logged in user type (i.\+e. \textquotesingle{}Student\textquotesingle{}) as an Enum \end{DoxyCompactList}\item 
+static int \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_ad8cb6ddc9015967aabd9c74f2000ea0c}{Logged\+In\+User\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Static property to get the ID of the logged in user \end{DoxyCompactList}\item 
+static string \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_af0868f61f0e84f2a35120248405109d9}{Logged\+In\+User\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Static property to get the name of the logged in user \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a27e1d840428523130254c4a2e75d4043}{Set\+Cookie} (string key, string value, Time\+Span expires)
+\begin{DoxyCompactList}\small\item\em Does the actual setting of the browser cookie \end{DoxyCompactList}\item 
+static string \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_acaa314851f0c09c3f109349bdaa6d615}{Get\+Cookie} (string key)
+\begin{DoxyCompactList}\small\item\em Gets value from specified cookie as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly string \hyperlink{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a94ac4283c0121050ef36d4080b526292}{\+\_\+key} = \char`\"{}uni\+Enrollment\+User\char`\"{}
+\begin{DoxyCompactList}\small\item\em Consistent cookie key \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used for getting and storing values from browser\textquotesingle{}s cookie store. It\textquotesingle{}s main use is storing user data and validation of logon and user type 
+
+
+
+Definition at line 12 of file Cookie\+Helper.\+cs.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Logged\+In\+User\+Type\+Enum@{Logged\+In\+User\+Type\+Enum}}
+\index{Logged\+In\+User\+Type\+Enum@{Logged\+In\+User\+Type\+Enum}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Logged\+In\+User\+Type\+Enum}{LoggedInUserTypeEnum}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Logged\+In\+User\+Type\+Enum}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9}
+
+
+For ease in Views 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+D\+M\+IN@{A\+D\+M\+IN}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!A\+D\+M\+IN@{A\+D\+M\+IN}}\item[{\em 
+A\+D\+M\+IN\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9a73acd9a5972130b75066c82595a1fae3}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9a73acd9a5972130b75066c82595a1fae3}
+}]\index{P\+R\+O\+F\+E\+S\+S\+OR@{P\+R\+O\+F\+E\+S\+S\+OR}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!P\+R\+O\+F\+E\+S\+S\+OR@{P\+R\+O\+F\+E\+S\+S\+OR}}\item[{\em 
+P\+R\+O\+F\+E\+S\+S\+OR\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9a172b9057f1e59ddcb93e8522b7968f09}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9a172b9057f1e59ddcb93e8522b7968f09}
+}]\index{S\+T\+U\+D\+E\+NT@{S\+T\+U\+D\+E\+NT}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!S\+T\+U\+D\+E\+NT@{S\+T\+U\+D\+E\+NT}}\item[{\em 
+S\+T\+U\+D\+E\+NT\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9ad0c872afd87e7fbe56a3cdf8f3a0f18c}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9ad0c872afd87e7fbe56a3cdf8f3a0f18c}
+}]\index{N\+O\+NE@{N\+O\+NE}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!N\+O\+NE@{N\+O\+NE}}\item[{\em 
+N\+O\+NE\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9ab50339a10e1de285ac99d4c3990b8693}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a6ccf3689f1679dfef56e5e7e3a5f17c9ab50339a10e1de285ac99d4c3990b8693}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 22 of file Cookie\+Helper.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Get\+Cookie@{Get\+Cookie}}
+\index{Get\+Cookie@{Get\+Cookie}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Get\+Cookie(string key)}{GetCookie(string key)}}]{\setlength{\rightskip}{0pt plus 5cm}static string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Get\+Cookie (
+\begin{DoxyParamCaption}
+\item[{string}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_acaa314851f0c09c3f109349bdaa6d615}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_acaa314851f0c09c3f109349bdaa6d615}
+
+
+Gets value from specified cookie as a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Name of cookie (or \textquotesingle{}key\textquotesingle{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value in the specified cookie
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Cookie\+Helper.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Is\+Logged\+In@{Is\+Logged\+In}}
+\index{Is\+Logged\+In@{Is\+Logged\+In}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Is\+Logged\+In()}{IsLoggedIn()}}]{\setlength{\rightskip}{0pt plus 5cm}static bool Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Is\+Logged\+In (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a5246ce649993e4489954be79b6ff81c1}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a5246ce649993e4489954be79b6ff81c1}
+
+
+Checks the login cookie to see if a user is looged in 
+
+\begin{DoxyReturn}{Returns}
+True if a user is logged in
+\end{DoxyReturn}
+
+
+Definition at line 113 of file Cookie\+Helper.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Log\+Out@{Log\+Out}}
+\index{Log\+Out@{Log\+Out}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Log\+Out()}{LogOut()}}]{\setlength{\rightskip}{0pt plus 5cm}static void Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Log\+Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a8d89858ce1ad57300dba697b3e025786}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a8d89858ce1ad57300dba697b3e025786}
+
+
+Simply sets the user type in the cookie to \textquotesingle{}99\textquotesingle{} -\/ Not a recognised user type 
+
+
+
+Definition at line 90 of file Cookie\+Helper.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Set\+Cookie@{Set\+Cookie}}
+\index{Set\+Cookie@{Set\+Cookie}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Set\+Cookie(string key, string value, Time\+Span expires)}{SetCookie(string key, string value, TimeSpan expires)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Set\+Cookie (
+\begin{DoxyParamCaption}
+\item[{string}]{key, }
+\item[{string}]{value, }
+\item[{Time\+Span}]{expires}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a27e1d840428523130254c4a2e75d4043}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a27e1d840428523130254c4a2e75d4043}
+
+
+Does the actual setting of the browser cookie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Name of cookie (or \textquotesingle{}key\textquotesingle{})\\
+\hline
+{\em value} & Cookie string -\/ whch contains data\\
+\hline
+{\em expires} & Time to cookie expire\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file Cookie\+Helper.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Set\+Login\+Cookie@{Set\+Login\+Cookie}}
+\index{Set\+Login\+Cookie@{Set\+Login\+Cookie}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Set\+Login\+Cookie(int user\+I\+D)}{SetLoginCookie(int userID)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Set\+Login\+Cookie (
+\begin{DoxyParamCaption}
+\item[{int}]{user\+ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a721083f9d6d893479224691ed474cadd}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a721083f9d6d893479224691ed474cadd}
+
+
+Generates the cooke value string and sets the user cookie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+ID} & User ID integer\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Cookie\+Helper.\+cs.
+
+
+
+\subsection{Member Data Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!\+\_\+key@{\+\_\+key}}
+\index{\+\_\+key@{\+\_\+key}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{\+\_\+key}{_key}}]{\setlength{\rightskip}{0pt plus 5cm}readonly string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+\_\+key = \char`\"{}uni\+Enrollment\+User\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a94ac4283c0121050ef36d4080b526292}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a94ac4283c0121050ef36d4080b526292}
+
+
+Consistent cookie key 
+
+
+
+Definition at line 17 of file Cookie\+Helper.\+cs.
+
+
+
+\subsection{Property Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Logged\+In\+User\+ID@{Logged\+In\+User\+ID}}
+\index{Logged\+In\+User\+ID@{Logged\+In\+User\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Logged\+In\+User\+ID}{LoggedInUserID}}]{\setlength{\rightskip}{0pt plus 5cm}int Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Logged\+In\+User\+ID\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_ad8cb6ddc9015967aabd9c74f2000ea0c}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_ad8cb6ddc9015967aabd9c74f2000ea0c}
+
+
+Static property to get the ID of the logged in user 
+
+
+
+Definition at line 61 of file Cookie\+Helper.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Logged\+In\+User\+Name@{Logged\+In\+User\+Name}}
+\index{Logged\+In\+User\+Name@{Logged\+In\+User\+Name}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Logged\+In\+User\+Name}{LoggedInUserName}}]{\setlength{\rightskip}{0pt plus 5cm}string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Logged\+In\+User\+Name\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_af0868f61f0e84f2a35120248405109d9}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_af0868f61f0e84f2a35120248405109d9}
+
+
+Static property to get the name of the logged in user 
+
+
+
+Definition at line 75 of file Cookie\+Helper.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}!Logged\+In\+User\+Type@{Logged\+In\+User\+Type}}
+\index{Logged\+In\+User\+Type@{Logged\+In\+User\+Type}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Helpers\+::\+Cookie\+Helper}}
+\subsubsection[{\texorpdfstring{Logged\+In\+User\+Type}{LoggedInUserType}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logged\+In\+User\+Type\+Enum} Uni\+Enrollment\+\_\+\+M\+V\+C.\+Helpers.\+Cookie\+Helper.\+Logged\+In\+User\+Type\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a3399b7e7ec670f2bff2bc6ae2939fca1}{}\label{class_uni_enrollment___m_v_c_1_1_helpers_1_1_cookie_helper_a3399b7e7ec670f2bff2bc6ae2939fca1}
+
+
+Static property to get the logged in user type (i.\+e. \textquotesingle{}Student\textquotesingle{}) as an Enum 
+
+
+
+Definition at line 34 of file Cookie\+Helper.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Documents/\+Work/\+Repositories/\+Uni\+Enrollment-\/\+D\+E\+M\+O/\+Uni\+Enrollment-\/\+M\+V\+C/\+Helpers/\hyperlink{_cookie_helper_8cs}{Cookie\+Helper.\+cs}\end{DoxyCompactItemize}

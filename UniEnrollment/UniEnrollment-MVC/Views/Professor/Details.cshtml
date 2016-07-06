@@ -1,0 +1,73 @@
+﻿@model UniEnrollment_MVC.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Professor Area</h2>
+
+<div>
+    <hr />
+    <span style="font-weight: bold;">@Html.DisplayNameFor(model => model.Name): </span> @Html.DisplayFor(model => model.Name)<br />
+    <span style="font-weight: bold;">@Html.DisplayNameFor(model => model.Username): </span> @Html.DisplayFor(model => model.Username)<br />
+    <span style="font-weight: bold;">@Html.DisplayNameFor(model => model.Active): </span> @Html.DisplayFor(model => model.Active)<br /><br />
+
+    <div class="row">
+        <div class="col-xs-7 col-md-4">
+
+            <h4>Running Courses</h4>
+
+            @if ((UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN ||
+                    UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID == Model.ID))
+            {
+                <span>@Html.ActionLink("Create New Course", "CreateWithID", "Course", new { id = Model.ID }, null)</span>
+                <br />
+                <br />
+            }
+
+            @{
+                foreach (var item in UniEnrollment_MVC.Models.CourseViewModel.GetCourseListByProfessorID(Model.ID))
+                {
+                    int count = UniEnrollment_MVC.Models.EnrollmentViewModel.GetCourseEnrollmentCount(item.ID);
+
+                    if (count > 1 || count == 0)
+                    {
+                        <span>@Html.ActionLink(@item.Name, "Details", "Course", new { id = item.ID }, null) (@count students)</span><br />
+                    }
+                    else
+                    {
+                        <span>@Html.ActionLink(@item.Name, "Details", "Course", new { id = item.ID }, null) (@count student)</span><br />
+                    }
+                }
+            }
+
+            <br />
+
+        </div>
+
+        <div class="col-xs-7 col-md-4">
+
+
+            <h4>Current Students</h4>
+
+            @{
+                foreach (var item in UniEnrollment_MVC.Models.EnrollmentViewModel.GetAllStudentsListWithProfessorID(Model.ID))
+                {
+                    <span>@Html.ActionLink(@item.Name, "Details", "Student", new { id = item.ID }, null)</span><br />
+                }
+            }
+            <br />
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+</div>
+<p>
+    @if ((UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN ||
+            UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID == Model.ID))
+    {
+        <span>@Html.ActionLink("Edit Professor Details", "Edit", new { id = Model.ID }) | </span>
+    }
+    @Html.ActionLink("Professor List", "Index")
+</p>

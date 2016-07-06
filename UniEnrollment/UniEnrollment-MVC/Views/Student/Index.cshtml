@@ -1,0 +1,50 @@
+﻿@model IEnumerable<UniEnrollment_MVC.Models.User>
+
+@{
+    ViewBag.Title = "Students";
+}
+
+<h2>Students</h2>
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th style="text-align: center;">
+            @Html.DisplayName("Courses Enrolled On")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td style="text-align: center;">
+                @item.Enrollments.Count()
+            </td>
+            <td>
+                @if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN)
+                {
+                    <span>@Html.ActionLink("Edit", "Edit", new { id = item.ID }) | </span>
+                }
+
+
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

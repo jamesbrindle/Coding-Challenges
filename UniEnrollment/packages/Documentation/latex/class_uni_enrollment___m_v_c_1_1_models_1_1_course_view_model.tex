@@ -1,0 +1,141 @@
+\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model}{}\section{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model Class Reference}
+\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model}\index{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a976367559f2ac0f57f873769aa4a3377}{Get\+Professor\+Name\+By\+ID} (int id)
+\begin{DoxyCompactList}\small\item\em Returns the user \textquotesingle{}Name\textquotesingle{} from their ID. Not strinctly required for most related views, the business models (seen in the Data\+Mode.\+edmx) are related so you can just call from e.\+g. Model.\+Course.\+Professor.\+Name however I used this out of scope once so it\textquotesingle{}s useful \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course}{Course} $>$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_acdcd8c1864587d0c8ab23e460ed8d901}{Get\+Course\+List} ()
+\begin{DoxyCompactList}\small\item\em Returns a list of courses specifically for use in drop down lsits \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course}{Course} $>$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a295886fe092d5245f6685ca0ff78bf3f}{Get\+Course\+List\+By\+Professor\+ID} (int id)
+\begin{DoxyCompactList}\small\item\em Get a list of courses ran by a specific professor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a6cdbca7e6c66c9505f4846935b355d6a}{ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a8fac888ed7328928c0551a8b0f2c85e8}{Professor\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_abf48fa3094f898b40071925f91e25e58}{Course\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a0ef4a9c7d23d04916bdc2202afea3a3f}{Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a6f025e7e960e0cd91fb73c6e947e055d}{Description}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Course\+View\+Model.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Get\+Course\+List@{Get\+Course\+List}}
+\index{Get\+Course\+List@{Get\+Course\+List}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Course\+List()}{GetCourseList()}}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Course}$>$ Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Get\+Course\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_acdcd8c1864587d0c8ab23e460ed8d901}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_acdcd8c1864587d0c8ab23e460ed8d901}
+
+
+Returns a list of courses specifically for use in drop down lsits 
+
+\begin{DoxyReturn}{Returns}
+List of courses
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Course\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Get\+Course\+List\+By\+Professor\+ID@{Get\+Course\+List\+By\+Professor\+ID}}
+\index{Get\+Course\+List\+By\+Professor\+ID@{Get\+Course\+List\+By\+Professor\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Course\+List\+By\+Professor\+I\+D(int id)}{GetCourseListByProfessorID(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Course}$>$ Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Get\+Course\+List\+By\+Professor\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a295886fe092d5245f6685ca0ff78bf3f}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a295886fe092d5245f6685ca0ff78bf3f}
+
+
+Get a list of courses ran by a specific professor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of professor (or user)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of courses ran by specific professor
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Course\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Get\+Professor\+Name\+By\+ID@{Get\+Professor\+Name\+By\+ID}}
+\index{Get\+Professor\+Name\+By\+ID@{Get\+Professor\+Name\+By\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Professor\+Name\+By\+I\+D(int id)}{GetProfessorNameByID(int id)}}]{\setlength{\rightskip}{0pt plus 5cm}static string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Get\+Professor\+Name\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a976367559f2ac0f57f873769aa4a3377}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a976367559f2ac0f57f873769aa4a3377}
+
+
+Returns the user \textquotesingle{}Name\textquotesingle{} from their ID. Not strinctly required for most related views, the business models (seen in the Data\+Mode.\+edmx) are related so you can just call from e.\+g. Model.\+Course.\+Professor.\+Name however I used this out of scope once so it\textquotesingle{}s useful 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of the professor (or user)
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Course\+View\+Model.\+cs.
+
+
+
+\subsection{Property Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Course\+Code@{Course\+Code}}
+\index{Course\+Code@{Course\+Code}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Course\+Code}{CourseCode}}]{\setlength{\rightskip}{0pt plus 5cm}string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Course\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_abf48fa3094f898b40071925f91e25e58}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_abf48fa3094f898b40071925f91e25e58}
+
+
+Definition at line 19 of file Course\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Description@{Description}}
+\index{Description@{Description}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Description}{Description}}]{\setlength{\rightskip}{0pt plus 5cm}string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a6f025e7e960e0cd91fb73c6e947e055d}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a6f025e7e960e0cd91fb73c6e947e055d}
+
+
+Definition at line 29 of file Course\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!ID@{ID}}
+\index{ID@{ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{ID}{ID}}]{\setlength{\rightskip}{0pt plus 5cm}int Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a6cdbca7e6c66c9505f4846935b355d6a}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a6cdbca7e6c66c9505f4846935b355d6a}
+
+
+Definition at line 10 of file Course\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Name@{Name}}
+\index{Name@{Name}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Name}{Name}}]{\setlength{\rightskip}{0pt plus 5cm}string Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a0ef4a9c7d23d04916bdc2202afea3a3f}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a0ef4a9c7d23d04916bdc2202afea3a3f}
+
+
+Definition at line 24 of file Course\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}!Professor\+ID@{Professor\+ID}}
+\index{Professor\+ID@{Professor\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Course\+View\+Model}}
+\subsubsection[{\texorpdfstring{Professor\+ID}{ProfessorID}}]{\setlength{\rightskip}{0pt plus 5cm}int Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Course\+View\+Model.\+Professor\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a8fac888ed7328928c0551a8b0f2c85e8}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_course_view_model_a8fac888ed7328928c0551a8b0f2c85e8}
+
+
+Definition at line 14 of file Course\+View\+Model.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Documents/\+Work/\+Repositories/\+Uni\+Enrollment-\/\+D\+E\+M\+O/\+Uni\+Enrollment-\/\+M\+V\+C/\+Models/\hyperlink{_course_view_model_8cs}{Course\+View\+Model.\+cs}\end{DoxyCompactItemize}

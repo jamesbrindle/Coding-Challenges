@@ -1,0 +1,58 @@
+﻿@model IEnumerable<UniEnrollment_MVC.Models.User>
+
+@{
+    ViewBag.Title = "Professors";
+}
+
+<h2>Professors</h2>
+<br />
+<p>
+    @if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN)
+    {
+        <span>@Html.ActionLink("Create New", "Create")</span>
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th style="text-align: center;">
+            @Html.DisplayName("Courses Running")
+        </th>
+        <th style="text-align: center;">
+            @Html.DisplayName("Total Students")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td style="text-align: center;">
+                @item.Courses.Count()
+            </td>
+            <td style="text-align: center;">
+                @UniEnrollment_MVC.Models.EnrollmentViewModel.GetAllStudentsListWithProfessorID(item.ID).Count
+            </td>
+            <td>
+            <td>
+                @if ((UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN))
+                {
+                    <span>@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |</span>
+                }
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

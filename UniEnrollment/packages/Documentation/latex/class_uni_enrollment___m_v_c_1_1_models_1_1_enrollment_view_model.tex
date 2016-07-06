@@ -1,0 +1,178 @@
+\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model}{}\section{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model Class Reference}
+\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model}\index{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_user}{User} $>$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_ae22e9947b130cec1f228bc059b4e74af}{Get\+All\+Students\+List\+With\+Professor\+ID} (int prof\+Id)
+\begin{DoxyCompactList}\small\item\em Annoying method -\/ Couldn\textquotesingle{}t simply cast the query list to List of Users. It gets all the students who are enolled on a course by a specified professor \end{DoxyCompactList}\item 
+static int \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a7bcea2a012bb5b3bc3481b7be74e498a}{Get\+Course\+Enrollment\+Count} (int course\+Id)
+\begin{DoxyCompactList}\small\item\em Count of how many users are enrolled on a particular course \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course}{Course} $>$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a98aa636acd09b996e836bb45af7fd7af}{Get\+Course\+Enrollment\+By\+Student\+ID} (int student\+Id)
+\begin{DoxyCompactList}\small\item\em List of all the courses a user in enrolled on \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_course}{Course} $>$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_aa037125196df4e574df5578152e92510}{Get\+Courses\+Not\+Enrolled\+On} (int student\+Id)
+\begin{DoxyCompactList}\small\item\em All other courses a particular student is not enrolled on -\/ It\textquotesingle{}s for populating a drop down So it\textquotesingle{}s a \textquotesingle{}filtering\textquotesingle{} method \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_user}{User} $>$ \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a9b1ff396627b19e9d8b3b357ed36e787}{Get\+Students\+Enrolled\+On\+Course} (int course\+Id)
+\begin{DoxyCompactList}\small\item\em Get a list of users enrolled on a particular course \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a4c171e275e120403f4fc627757eb2d17}{Course\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a37ef31b609762bd1d4db2944dbbb42a0}{Student\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Date\+Time \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_ac4df04e11eccbb18ec3e8304ac7fbc0e}{Enrollment\+Date}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Enrollment\+View\+Model.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Get\+All\+Students\+List\+With\+Professor\+ID@{Get\+All\+Students\+List\+With\+Professor\+ID}}
+\index{Get\+All\+Students\+List\+With\+Professor\+ID@{Get\+All\+Students\+List\+With\+Professor\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+All\+Students\+List\+With\+Professor\+I\+D(int prof\+Id)}{GetAllStudentsListWithProfessorID(int profId)}}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf User}$>$ Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Get\+All\+Students\+List\+With\+Professor\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{prof\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_ae22e9947b130cec1f228bc059b4e74af}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_ae22e9947b130cec1f228bc059b4e74af}
+
+
+Annoying method -\/ Couldn\textquotesingle{}t simply cast the query list to List of Users. It gets all the students who are enolled on a course by a specified professor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prof\+Id} & ID of professor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of users
+\end{DoxyReturn}
+
+
+Definition at line 23 of file Enrollment\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Get\+Course\+Enrollment\+By\+Student\+ID@{Get\+Course\+Enrollment\+By\+Student\+ID}}
+\index{Get\+Course\+Enrollment\+By\+Student\+ID@{Get\+Course\+Enrollment\+By\+Student\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Course\+Enrollment\+By\+Student\+I\+D(int student\+Id)}{GetCourseEnrollmentByStudentID(int studentId)}}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Course}$>$ Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Get\+Course\+Enrollment\+By\+Student\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{student\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a98aa636acd09b996e836bb45af7fd7af}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a98aa636acd09b996e836bb45af7fd7af}
+
+
+List of all the courses a user in enrolled on 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student\+Id} & The ID of the student to see what course they\textquotesingle{}re enrolled on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of courses
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Enrollment\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Get\+Course\+Enrollment\+Count@{Get\+Course\+Enrollment\+Count}}
+\index{Get\+Course\+Enrollment\+Count@{Get\+Course\+Enrollment\+Count}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Course\+Enrollment\+Count(int course\+Id)}{GetCourseEnrollmentCount(int courseId)}}]{\setlength{\rightskip}{0pt plus 5cm}static int Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Get\+Course\+Enrollment\+Count (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a7bcea2a012bb5b3bc3481b7be74e498a}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a7bcea2a012bb5b3bc3481b7be74e498a}
+
+
+Count of how many users are enrolled on a particular course 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course\+Id} & The course ID of the course to count\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of students in that course
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Enrollment\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Get\+Courses\+Not\+Enrolled\+On@{Get\+Courses\+Not\+Enrolled\+On}}
+\index{Get\+Courses\+Not\+Enrolled\+On@{Get\+Courses\+Not\+Enrolled\+On}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Courses\+Not\+Enrolled\+On(int student\+Id)}{GetCoursesNotEnrolledOn(int studentId)}}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Course}$>$ Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Get\+Courses\+Not\+Enrolled\+On (
+\begin{DoxyParamCaption}
+\item[{int}]{student\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_aa037125196df4e574df5578152e92510}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_aa037125196df4e574df5578152e92510}
+
+
+All other courses a particular student is not enrolled on -\/ It\textquotesingle{}s for populating a drop down So it\textquotesingle{}s a \textquotesingle{}filtering\textquotesingle{} method 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student\+Id} & \hyperlink{class_uni_enrollment___m_v_c_1_1_models_1_1_student}{Student} ID of student to determine what courses they don\textquotesingle{}t belong to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of courses a user doesn\textquotesingle{}t belong to
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Enrollment\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Get\+Students\+Enrolled\+On\+Course@{Get\+Students\+Enrolled\+On\+Course}}
+\index{Get\+Students\+Enrolled\+On\+Course@{Get\+Students\+Enrolled\+On\+Course}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Get\+Students\+Enrolled\+On\+Course(int course\+Id)}{GetStudentsEnrolledOnCourse(int courseId)}}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf User}$>$ Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Get\+Students\+Enrolled\+On\+Course (
+\begin{DoxyParamCaption}
+\item[{int}]{course\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a9b1ff396627b19e9d8b3b357ed36e787}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a9b1ff396627b19e9d8b3b357ed36e787}
+
+
+Get a list of users enrolled on a particular course 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course\+Id} & The ID of the course that students belong to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of users belonging to a given course
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Enrollment\+View\+Model.\+cs.
+
+
+
+\subsection{Property Documentation}
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Course\+ID@{Course\+ID}}
+\index{Course\+ID@{Course\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Course\+ID}{CourseID}}]{\setlength{\rightskip}{0pt plus 5cm}int Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Course\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a4c171e275e120403f4fc627757eb2d17}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a4c171e275e120403f4fc627757eb2d17}
+
+
+Definition at line 10 of file Enrollment\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Enrollment\+Date@{Enrollment\+Date}}
+\index{Enrollment\+Date@{Enrollment\+Date}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Enrollment\+Date}{EnrollmentDate}}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Enrollment\+Date\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_ac4df04e11eccbb18ec3e8304ac7fbc0e}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_ac4df04e11eccbb18ec3e8304ac7fbc0e}
+
+
+Definition at line 15 of file Enrollment\+View\+Model.\+cs.
+
+\index{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}!Student\+ID@{Student\+ID}}
+\index{Student\+ID@{Student\+ID}!Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model@{Uni\+Enrollment\+\_\+\+M\+V\+C\+::\+Models\+::\+Enrollment\+View\+Model}}
+\subsubsection[{\texorpdfstring{Student\+ID}{StudentID}}]{\setlength{\rightskip}{0pt plus 5cm}int Uni\+Enrollment\+\_\+\+M\+V\+C.\+Models.\+Enrollment\+View\+Model.\+Student\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a37ef31b609762bd1d4db2944dbbb42a0}{}\label{class_uni_enrollment___m_v_c_1_1_models_1_1_enrollment_view_model_a37ef31b609762bd1d4db2944dbbb42a0}
+
+
+Definition at line 12 of file Enrollment\+View\+Model.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+H\+:/\+Documents/\+Work/\+Repositories/\+Uni\+Enrollment-\/\+D\+E\+M\+O/\+Uni\+Enrollment-\/\+M\+V\+C/\+Models/\hyperlink{_enrollment_view_model_8cs}{Enrollment\+View\+Model.\+cs}\end{DoxyCompactItemize}

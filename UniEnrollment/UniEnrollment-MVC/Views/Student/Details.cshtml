@@ -1,0 +1,81 @@
+﻿@model UniEnrollment_MVC.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Student Area</h2>
+
+<div>
+    <hr />
+    <span style="font-weight: bold;">@Html.DisplayNameFor(model => model.Name): </span> @Html.DisplayFor(model => model.Name)<br />
+    <span style="font-weight: bold;">@Html.DisplayNameFor(model => model.Username): </span> @Html.DisplayFor(model => model.Username)<br />
+    <span style="font-weight: bold;">@Html.DisplayNameFor(model => model.Active): </span> @Html.DisplayFor(model => model.Active)<br /><br />
+
+    <div class="row">
+        <div class="col-xs-7 col-md-4">
+
+            @{
+                List<UniEnrollment_MVC.Models.Course> enrolledCourses =
+                    UniEnrollment_MVC.Models.EnrollmentViewModel.GetCourseEnrollmentByStudentID(Model.ID);
+            }
+
+            <h4>Current Enrollments (@enrolledCourses.Count())</h4>
+            @{
+                foreach (var item in enrolledCourses)
+                {
+                    @Html.ActionLink(item.Name, "Details", "Course", new { id = item.ID }, null)<br />
+                }
+            }
+
+            <br />
+        </div>
+
+        @if (Model.ID == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID ||
+            UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN)
+        {
+
+            <div class="col-xs-7 col-md-4">
+                <h4>Enroll On Course</h4>
+                <br />
+
+                @using (Html.BeginForm("Enroll", "Student", FormMethod.Post, new { @encType = "multipart/form-data" }))
+                {
+                    @Html.DropDownList("courseId", new SelectList(UniEnrollment_MVC.Models.EnrollmentViewModel.GetCoursesNotEnrolledOn(Model.ID).AsEnumerable(), 
+                        "ID", "Name"), new { @class = "form-control" })
+                    @Html.Hidden("id", Model.ID)
+
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        <input type="submit" value="Enroll" class="btn btn-default" onclick="return confirm('Are you sure you want to enroll on this course?');" />
+                    </div>
+                }
+                <br />
+            </div>
+        }
+
+
+    </div>
+    <br />
+    <br />
+    <br />
+</div>
+<p>
+    @if ((UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN ||
+        Model.ID == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserID))
+    {
+        <span>@Html.ActionLink("Edit Student Details", "Edit", new { id = Model.ID }) | </span>
+    }
+
+    @if (UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.ADMIN ||
+            UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserType == UniEnrollment_MVC.Helpers.CookieHelper.LoggedInUserTypeEnum.PROFESSOR)
+    {
+        @Html.ActionLink("Student List", "Index")
+    }
+    else
+    {
+        @Html.ActionLink("Home", "Index", "Home", null, null)
+    }
+
+</p>
